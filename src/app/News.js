@@ -7,7 +7,7 @@ export default function News() {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     fetch(
-      `https://newsapi.org/v2/everything?q=apple&from=2024-06-30&to=2024-06-30&sortBy=popularity&apiKey=${process.env.NEXT_PUBLIC_API_KEY}`
+      `https://newsapi.org/v2/everything?q=apple&from=2024-06-30&to=2024-06-30&sortBy=popularity&apiKey=d61b9062cdf7427381b3cb3f1fe22fcf`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -30,7 +30,7 @@ export default function News() {
             <div className="loader"></div>
           </div>
         ) : (
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
             {news.map((article) => (
               <div
                 style={{
