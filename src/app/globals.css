@@ -2,32 +2,160 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-gray-900 overflow-x-hidden;
+}
+.animation-0 {
+  @apply w-20 bg-white/50 h-1 top-20;
+  animation: move-1 linear 0.5s infinite;
+}
+@keyframes move-1 {
+  from {
+    left: 10px;
+  }
+  to {
+    left: 100%;
+  }
+}
+.animation-1 {
+  @apply w-20 bg-white/50 h-1 top-[20%];
+  animation: move-2 linear 0.8s infinite;
+}
+@keyframes move-2 {
+  from {
+    left: 10px;
+  }
+  to {
+    left: 100%;
+  }
+}
+.animation-2 {
+  @apply w-20 bg-white/10 h-1 top-[30%];
+  animation: move-3 linear 1.2s infinite;
+}
+@keyframes move-3 {
+  from {
+    left: 10px;
+  }
+  to {
+    left: 100%;
+  }
+}
+.animation-3 {
+  @apply w-24 bg-white/20 h-1 top-[40%];
+  animation: move-4 linear 0.5s infinite;
+}
+@keyframes move-4 {
+  from {
+    left: 10px;
+  }
+  to {
+    left: 100%;
+  }
+}
+.animation-4 {
+  @apply w-16 bg-white/30 h-1 top-[50%];
+  animation: move-5 linear 0.5s infinite;
+}
+@keyframes move-5 {
+  from {
+    left: 10px;
+  }
+  to {
+    left: 100%;
+  }
+}
+.animation-5 {
+  @apply w-20 bg-white/50 h-1 top-[60%];
+  animation: move-6 linear 0.5s infinite;
+}
+@keyframes move-6 {
+  from {
+    left: 10px;
+  }
+  to {
+    left: 100%;
+  }
+}
+.animation-6 {
+  @apply w-20 bg-white/50 h-1 top-[70%];
+  animation: move-7 linear 0.8s infinite;
+}
+@keyframes move-7 {
+  from {
+    left: 10px;
+  }
+  to {
+    left: 100%;
+  }
+}
+.animation-7 {
+  @apply w-20 bg-white/10 h-1 top-[80%];
+  animation: move-8 linear 1.2s infinite;
+}
+@keyframes move-8 {
+  from {
+    left: 10px;
+  }
+  to {
+    left: 100%;
+  }
+}
+.animation-8 {
+  @apply w-24 bg-white/20 h-1 top-[90%];
+  animation: move-9 linear 0.5s infinite;
+}
+@keyframes move-9 {
+  from {
+    left: 10px;
+  }
+  to {
+    left: 100%;
+  }
+}
+.animation-9 {
+  @apply w-16 bg-white/30 h-1 top-[100%];
+  animation: move-5 linear 0.5s infinite;
+}
+@keyframes move-10 {
+  from {
+    left: 10px;
+  }
+  to {
+    left: 100%;
+  }
+}
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid lightblue;
+  border-right-color: rgb(124, 70, 251);
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(124, 70, 251);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(93, 28, 246);
 }
