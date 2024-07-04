@@ -3,8 +3,8 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { VscLoading } from "react-icons/vsc";
 export default function News() {
-  //   const [news, setNews] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(true);
+  const [news, setNews] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
   //   useEffect(() => {
   //     fetch(
   //       `https://newsapi.org/v2/everything?q=apple&from=2024-06-30&to=2024-06-30&sortBy=popularity&apiKey=d61b9062cdf7427381b3cb3f1fe22fcf`
@@ -16,10 +16,8 @@ export default function News() {
   //         setIsLoaded(true);
   //       });
   //   }, []);
-  const news = {
-    status: "ok",
-    totalResults: 687,
-    articles: [
+  useEffect(() => {
+    setNews([
       {
         source: {
           id: "the-verge",
@@ -1691,8 +1689,10 @@ export default function News() {
         content:
           "Amazon has discounts on the Apple AirTag at $24.99 from $29.99, with the 4-pack tracker also on sale for $78.99 from $99.99.\r\nThe Apple AirTag can keep track of your things and devices using the Find… [+832 chars]",
       },
-    ],
-  };
+    ]);
+    setIsLoaded(true);
+  }, []);
+
   return (
     <div className="container mx-auto ">
       <div className=" p-10 rounded-3xl bg-slate-900 border border-white/10 container mx-auto">
