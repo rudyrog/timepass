@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { VscLoading } from "react-icons/vsc";
 export default function News() {
   //   const [news, setNews] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(true);
   //   useEffect(() => {
   //     fetch(
   //       `https://newsapi.org/v2/everything?q=apple&from=2024-06-30&to=2024-06-30&sortBy=popularity&apiKey=d61b9062cdf7427381b3cb3f1fe22fcf`
