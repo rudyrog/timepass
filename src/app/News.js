@@ -1710,7 +1710,7 @@ export default function News() {
             {news.map((article) => (
               <div
                 style={{
-                  background: `linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url(${article.urlToImage})`,
+                  background: `url(${article.urlToImage})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
